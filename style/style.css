@@ -1,0 +1,538 @@
+body{
+    margin: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    top: 0;
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+    background-color: #000;
+}
+.front_block{
+    width: 100%;
+    max-width: 100%;
+    height: 1080px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("./asset/background/debate_bkg.png");
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.front_block_text{
+    position: absolute;
+    margin-top: 36.813rem;
+    text-align: center;
+    z-index: 99;
+}
+.token_name{
+    font-size: 59px;
+}
+.title_text{
+    font-size: 92px;
+}
+.title_img{
+    display: none;
+}
+.description_text{
+    font-size: 25px;
+    width: 730px;
+}
+.crowd_block{
+    width: 100%;
+    max-width: 100%;
+    height: 2200px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("./asset/background/debate_cont_bkg.png");
+    position: relative;
+    margin-top: -500px;
+    z-index: 1;
+}
+.back_fix_crowd{
+    width: 100%;
+    max-width: 100%;
+    height: 460px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("./asset/background/back_fix_crowd.png");
+    position: absolute;
+    margin-top: 416px;
+    animation: moveDownUp 3s ease-in-out infinite;
+}
+.anim_green_crowd{
+    width: 100%;
+    max-width: 100%;
+    height: 495px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("./asset/background/anim_green_crowd.png");
+    position: absolute;
+    margin-top: 400px;
+    animation: moveUpDown 2s ease-in-out infinite;
+}
+.anim_black_crowd{
+    width: 100%;
+    max-width: 100%;
+    height: 430px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("./asset/background/anim_black_crowd.png");
+    position: absolute;
+    margin-top: 470px;
+    animation: moveDownUp 2s ease-in-out infinite;
+}
+@keyframes moveDownUp {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+}
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.info_block{
+    position: absolute;
+    width: 100%;
+    margin-top: 33rem;
+    display: flex;
+    flex-direction: column;
+}
+.link_list_block{
+    display: flex;
+    justify-content: center;
+}
+.link_list{
+    z-index: 99;
+    display: flex;
+    flex-direction: row;
+    width: 288px;
+    justify-content: space-between;
+    margin-top: 3.625rem;
+}
+.img_debate{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.875rem;
+}
+.address_token{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 2.313rem;
+}
+.choose_fighter_title{
+    font-size: 7.438rem;
+    text-align: center;
+    margin-top: 6.625rem;
+}
+.choose_fighter_block{
+    width: 100%;
+    max-width: 100%;
+    z-index: 99;
+    position: absolute;
+    margin-top: 63rem;
+}
+.choose_fighter{
+    position: relative;
+}
+.support_imgs{
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("./asset/img/block_choose_background.png");
+    width: 92.4%;
+    margin-left: 3.8%;
+    z-index: 98;
+    height: 1241px;
+    position: absolute;
+}
+.choose_opponents{
+    width: 100%;
+    max-width: 100%;
+    margin-top: 20rem;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.choose_trump{
+    width: 780px;
+    height: 953px;
+    background-image: url("./asset/img/choose_trump.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 99;
+    left: 0;
+    position: relative;
+}
+.choose_biden{
+    width: 684px;
+    height: 953px;
+    background-image: url("./asset/img/choose_biden.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 99;
+    right: 0;
+    position: relative;
+}
+.choose_biden .btn_choose{
+    width: 430px;
+    height: 115px;
+    bottom: 153px;
+    right: 115px;
+    position: absolute;
+    cursor: pointer;
+}
+.choose_trump .btn_choose{
+    width: 430px;
+    height: 115px;
+    bottom: 153px;
+    left: 88px;
+    position: absolute;
+    cursor: pointer;
+}
+.mem_img{
+    position: absolute;
+    width: 541px;
+    height: 615px;
+}
+#mem_trump{
+    left: 0;
+    bottom: 0;
+}
+#mem_biden{
+    right: 0;
+    bottom: 0;
+}
+#mem_trump, #mem_biden {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 0;
+    transform: scale(0);
+}
+
+#mem_trump.visible, #mem_biden.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+.add_info_link{
+    position: absolute;
+    margin-top: 60rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media screen and (min-width: 2550px){
+    .front_block{
+        height: 1200px;
+    }
+    .crowd_block{
+        margin-top: -550px;
+    }
+    .front_block_text {
+        margin-top: 49rem;
+    }
+    .info_block{
+        margin-top: 39rem;
+    }
+    .support_imgs{
+        width: 70%;
+        margin-left: 15%;
+    }
+}
+
+@media screen and (max-width: 1662px){
+    .crowd_block{
+        margin-top: -570px;
+    }
+    .front_block_text{
+        margin-top: 30rem;
+    }
+    .choose_trump {
+        width: 700px;
+        height: 850px;
+    }
+    .choose_biden {
+        width: 610px;
+        height: 850px;
+    }
+    .add_info_link{
+        margin-top: 50rem;
+    }
+    .choose_fighter_block {
+        margin-top: 65rem;
+    }
+    .support_imgs{
+        height: 1150px;
+    }
+}
+@media screen and (max-width: 1540px){
+    .front_block_text {
+        margin-top: 28rem;
+    }
+    .crowd_block{
+        height: 1900px;
+    }
+    .support_imgs{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .choose_trump {
+        width: 615px;
+        height: 752px;
+    }
+    .choose_biden {
+        width: 540px;
+        height: 752px;
+    }
+    .add_info_link {
+        margin-top: 45rem;
+    }
+    .support_imgs {
+        height: 1000px;
+    }
+}
+@media screen and (max-width: 1441px){
+    .front_block_text {
+        margin-top: 26rem;
+    }
+    .crowd_block {
+        margin-top: -700px;
+    }
+    .address_token {
+        font-size: 1rem;
+    }
+    .choose_fighter_title {
+        font-size: 5.438rem;
+    }
+}
+@media screen and (max-width: 1281px){
+    .choose_trump {
+        width: 550px;
+        height: 670px;
+    }
+    .choose_biden {
+        width: 481px;
+        height: 670px;
+    }
+    .choose_biden .btn_choose {
+        width: 300px;
+        height: 80px;
+    }
+    .choose_trump .btn_choose {
+        width: 300px;
+        height: 80px;
+    }
+    .add_info_link {
+        margin-top: 35rem;
+    }
+    .support_imgs {
+        height: 900px;
+    }
+}
+
+@media screen and (max-width: 1025px){
+    .front_block_text{
+        margin-top: 18rem;
+    }
+    .crowd_block {
+        margin-top: -800px;
+    }
+    .back_fix_crowd {
+        margin-top: 300px;
+    }
+    .anim_green_crowd {
+        margin-top: 315px;
+    }
+    .anim_black_crowd {
+        margin-top: 350px;
+    }
+    .choose_fighter_title {
+        font-size: 4rem;
+    }
+    .choose_fighter_title{
+        margin-top: 3rem;
+    }
+    .support_imgs {
+        height: 750px;
+    }
+    .choose_trump {
+        width: 450px;
+        height: 550px;
+    }
+    .choose_biden {
+        width: 400px;
+        height: 550px;
+    }
+    .add_info_link {
+        margin-top: 30rem;
+    }
+    .choose_biden .btn_choose {
+        width: 250px;
+        height: 70px;
+    }
+    .choose_trump .btn_choose {
+        width: 250px;
+        height: 70px;
+    }
+    .address_token {
+        font-size: .75rem;
+        margin-top: 5rem;
+    }
+}
+@media screen and (max-width: 431px){
+    .front_block{
+        background-image: url('./asset/background/mobile_debate_bkg.png');
+        background-repeat: no-repeat;
+    }
+    .title_text {
+        font-size: 33px;
+    }
+    .description_text{
+        width: 430px;
+    }
+    .crowd_block{
+        background-image: none;
+    }
+    .back_fix_crowd {
+        margin-top: 120px;
+    }
+    .anim_green_crowd {
+        margin-top: 150px;
+    }
+    .anim_black_crowd {
+        margin-top: 170px;
+    }
+    .front_block_text {
+        margin-top: 35rem;
+    }
+    .title_text{
+        display: none;
+    }
+    .title_img{
+        display: block;
+    }
+    .description_text {
+        width: 320px;
+        font-size: 20px;
+    }
+    .info_block{
+        margin-top: 62rem;
+    }
+    .address_token {
+        font-size: 1rem;
+    }
+    .choose_fighter_block {
+        margin-top: 95rem;
+    }
+    .choose_fighter_title {
+        font-size: 3rem;
+    }
+    .support_imgs {
+        width: 100%;
+        margin: 0;
+    }
+    .choose_trump{
+        background-image: url("./asset/img/mob_choose_trump.png");
+        width: 289px;
+        height: 569px;
+    }
+    .choose_biden{
+        background-image: url("./asset/img/mob_choose_biden.png");
+        width: 245px;
+        height: 592px;
+    }
+    .choose_biden .btn_choose {
+        width: 188px;
+        height: 50px;
+        right: 15px;
+        bottom: 230px;
+    }
+    .choose_trump .btn_choose {
+        width: 188px;
+        height: 50px;
+        left: 30px;
+        bottom: 217px;
+    }
+    .mem_img{
+        width: 201px;
+        height: 192px;
+    }
+    #mem_trump{
+        top: 100px;
+    }
+    #mem_trump img{
+        width: 164px;
+        height: 203px;
+        transform: rotate(45deg);
+    }
+    #mem_biden{
+        top: 150px;
+        right: 0;
+    }
+    #mem_biden img{
+        width: 201px;
+        height: 192px;
+        transform: rotate(-85deg);
+    }
+    .add_info_link {
+        margin-top: 45rem;
+        z-index: 999;
+    }
+    .address_token{
+        display: block;
+        font-size: 1rem;
+        text-align: center;
+        width: 400px;
+        padding-bottom: 2rem;
+    }
+}
+@media screen and (max-width: 391px){
+    .address_token{
+        width: 100%;
+    }
+    .anim_green_crowd {
+        margin-top: 70px;
+    }
+    .back_fix_crowd {
+        margin-top: 45px;
+    }
+    .anim_black_crowd {
+        margin-top: 90px;
+    }
+    @keyframes moveDownUp {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(10px);
+        }
+    }
+    @keyframes moveUpDown {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+    .choose_biden .btn_choose {
+        transform: rotate(-15deg);
+    }
+    .choose_trump .btn_choose {
+        transform: rotate(-20deg);
+    }
+}
+@media screen and (max-width: 361px){
+    .address_token{
+        font-size: .80rem;
+    }
+}
